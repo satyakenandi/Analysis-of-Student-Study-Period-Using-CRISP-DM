@@ -1,0 +1,72 @@
+{% include 'components/header.html' %}
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column" xmlns="http://www.w3.org/1999/html">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+
+          <div class="row">
+
+          </div>
+
+            <!-- Page Heading -->
+            <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Informasi Tree</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="/static/tree-example.PNG" alt="">
+                  </div>
+                  <p>Petunjuk membaca tree adalah sebagai berikut : </p>
+                    <li>Node akar adalah IPK (mempunyai pengaruh paling tinggi pada tree)</li>
+                    <li>Node kedua dari node akar/node atribut adalah nilai dari atribut yang bersangkutan</li>
+                    <li>Node cabang adalah node selanjutnya dari node akar/node cabang sebelumnya, node cabang mempunyai 4 atribut (jurusan, jenis kelamin, TOEFL, asal)</li>
+                    <li>Node terakhir dari setiap jalur merupakan kelas/target yaitu Tepat dan Telat</li>
+{#                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>#}
+                </div>
+              </div>
+
+            </div>
+{#          <div class="d-sm-flex align-items-center justify-content-between mb-4">#}
+{#            <h1 class="h3 mb-0 text-gray-800">Selamat Datang</h1>#}
+{#          </div>#}
+
+          <!-- Content Row -->
+          <div class="row">
+
+
+          </div>
+
+{#        </div>#}
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+{% include 'components/footer.html' %}

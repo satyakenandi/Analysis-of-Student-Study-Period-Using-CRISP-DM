@@ -1,0 +1,115 @@
+{% include 'components/header.html' %}
+
+{#{% block body %}#}
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800"></h1>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+{#            <div class="col-lg-6 mb-4">#}
+{#              <p>Akurasi Model</p>#}
+{#                <p class="mb-0">{{ akurasi_hasil }}</p>#}
+{#            </div>#}
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Prediksi Masa Studi</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <h2 class="text-center text-uppercase text-secondary mb-0">Pilih Isian</h2>
+        <hr class="star-dark mb-5">
+        <form id='submit_jurusan' method="POST" action="{{ url_for('submit_new_jurusan') }}">
+                    <div class="form-group">
+                    <label for="jurusan">Jurusan</label>
+                     <SELECT class="form-control" name="selected_jurusan">
+				          <option value="{{selected_jurusan}}" selected>{{selected_jurusan}}</option>
+				          <option value="Kimia Murni">Kimia</option>
+				          <option value="Matematika">Matematika</option>
+				          <option value="Fisika">Fisika</option>
+                          <option value="Statistika">Statistika</option>
+				          <option value="Ilmu Komputer">Ilmu Komputer</option>
+				          <option value="Biologi">Biologi</option>
+				      </SELECT>
+                </div>
+                    <div class="form-group">
+                     <label for="ipk">IPK</label>
+                     <SELECT class="form-control" name="selected_ipk">
+				          <option value="{{selected_ipk}}" selected>{{selected_ipk}}</option>
+				          <option value="<= 2.5"><= 2.5</option>
+				          <option value="> 2.5 dan <= 3.0"> > 2.5 dan <= 3.0 </option>
+				          <option value="> 3.0 dan <= 3.5"> > 3.0 dan <= 3.5 </option>
+                          <option value="> 3.5 dan <= 4.0"> > 3.5 dan <= 4.0 </option>
+				      </SELECT>
+                    </div>
+                    <label for="toefl">TOEFL</label>
+                     <div class="form-group">
+                     <SELECT class="form-control" name="selected_toefl">
+				          <option value="{{selected_toefl}}" selected>{{selected_toefl}}</option>
+				          <option value="<= 420"> <= 420</option>
+				          <option value="> 420 dan <= 480"> > 420 dan <= 480 </option>
+				          <option value="> 480 dan <= 520"> > 480 dan <= 520 </option>
+                          <option value="> 520"> > 520 </option>
+				      </SELECT>
+                     </div>
+                    <label for="jeniskelamin">Jenis Kelamin</label>
+                    <div class="form-group">
+                     <SELECT class="form-control" name="selected_jeniskelamin">
+				          <option value="{{selected_jeniskelamin}}" selected>{{selected_jeniskelamin}}</option>
+				          <option value="Laki - laki"> Laki - laki</option>
+				          <option value="Perempuan"> Perempuan </option>
+				      </SELECT>
+                    </div>
+                     <label for="asal">Asal</label>
+                     <div class="form-group">
+                     <SELECT class="form-control" name="selected_asal">
+				          <option value="{{selected_asal}}" selected>{{selected_asal}}</option>
+				          <option value="Semarang"> Semarang </option>
+				          <option value="Luar Semarang"> Luar Semarang </option>
+				      </SELECT>
+                     </div>
+             <button type="submit" class="btn btn-primary">Proses</button>
+            </form>
+                    <br>
+                    <p>Akurasi Model &nbsp;= {{ akurasi_hasil }}</p>
+                <p>Specifity Model &nbsp;= {{ specifity_hasil }}</p>
+                <p>Sensitivity Model &nbsp;= {{ sensitivity_hasil }}</p>
+                    </br>
+          <p> Terprediksi sebagai kelas </p>
+             <b>{{ model_results }}</b>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <div class="col-lg-6 mb-4">
+
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+{#{% endblock %}#}
+
+{% include 'components/footer.html' %}

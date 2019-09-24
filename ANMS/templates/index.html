@@ -1,0 +1,84 @@
+{% include 'components/header.html' %}
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column" xmlns="http://www.w3.org/1999/html">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+
+          <div class="row">
+
+          </div>
+
+{#            <!-- Page Heading -->#}
+{#          <div class="d-sm-flex align-items-center justify-content-between mb-4">#}
+{#            <h1 class="h3 mb-0 text-gray-800">Selamat Datang</h1>#}
+{#          </div>#}
+
+            <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Selamat Datang</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="/static/bootstrap/img/undraw_posting_photo.svg" alt="">
+                  </div>
+                  <p class="mb-0">Aplikasi Analisis Masa Studi adalah aplikasi untuk menganalisis masa studi mahasiswa FSM Undip</p>
+                  <p>Untuk mengetahui faktor apa saja yang mempengaruhi keterlambatan lulus mahasiswa FSM Undip</p>
+                    {{ grafik }}
+                  <p>Atribut yang digunakan dalam pemodelan pohon keputusan dan nilai kategori dari masing-masing atribut adalah sebagai berikut : </p>
+                    <li>Jurusan (Matematika, Kimia, Fisika, Biologi, Statistika, dan Informatika)</li>
+                    <li>IPK (Cukup, Baik, Sangat Baik, Istimewa)</li>
+                    <li>TOEFL(Elementary, Low, High, Advanced)</li>
+                    <li>Jenis Kelamin (L/P)</li>
+                    <li>Asal (Luar Semarang & Semarang)</li>
+{#                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>#}
+                </div>
+              </div>
+
+{#          <!-- Content Row -->#}
+{#          <div class="row">#}
+{##}
+{#            <div class="col-lg-6 mb-4">#}
+{#                <p>Aplikasi Analisis Masa Studi adalah aplikasi untuk menganalisis masa studi mahasiswa FSM Undip, menggunakan data wisudawan periode kelulusan 2012-2017</p>#}
+{#                  <p class="mb-0">Untuk mengetahui faktor apa saja yang mempengaruhi keterlambatan lulus mahasiswa FSM Undip</p>#}
+{##}
+{#                <br>#}
+{#                <p>Akurasi Model &nbsp;= {{ akurasi_hasil }}</p>#}
+{#                <p>Specifity Model &nbsp;= {{ specifity_hasil }}</p>#}
+{#                <p>Sensitivity Model &nbsp;= {{ sensitivity_hasil }}</p>#}
+{#                </br>#}
+{#            </div>#}
+{#          </div>#}
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+{% include 'components/footer.html' %}

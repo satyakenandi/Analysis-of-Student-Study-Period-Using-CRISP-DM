@@ -1,0 +1,64 @@
+{#{% include 'components/header.html' %}#}
+{##}
+{#<div class="card shadow mb-4">#}
+{#    <div class="card-header py-3">#}
+{#        <h6 class="m-0 font-weight-bold text-primary">Data Awal Wisudawan</h6>#}
+{#    </div>#}
+{#<textarea rows="4" cols="50">#}
+{#At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.#}
+{#At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.#}
+{#</textarea>#}
+{##}
+{#<body>#}
+{#{{ cek }}#}
+{#</body>#}
+{#{% include 'components/footer.html' %}#}
+
+{% include 'components/header.html' %}
+
+{#{% block body %}#}
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800"></h1>
+          </div>
+
+          <!-- Content Row -->
+
+          <!-- Basic Card Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Visualisasi Pohon Keputusan</h6>
+        </div>
+        <div class="card-body">
+            <textarea rows="15" cols="100">
+            {{ cek }}
+            </textarea>
+        </div>
+    </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <div class="col-lg-6 mb-4">
+
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+{#{% endblock %}#}
+
+{% include 'components/footer.html' %}
